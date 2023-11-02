@@ -1,0 +1,10 @@
+# 用BaggingClassifier进行机器学习判断 
+from sklearn.ensemble import BaggingClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split
+
+base_classifier = DecisionTreeClassifier()
+bagging_classifier = BaggingClassifier(base_classifier, n_estimators=10, random_state=42)
+bagging_classifier.fit(x_train, y_train)
+
+y_pred = bagging_classifier.predict(x_test)
