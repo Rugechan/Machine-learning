@@ -1,0 +1,11 @@
+# 用决策树进行机器学习判断 
+from sklearn.tree import DecisionTreeClassifier
+
+# 创建决策树分类器
+dtc = DecisionTreeClassifier()
+
+# 训练模型
+dtc.fit(x_train, y_train)
+
+# 进行预测
+y_pred = dtc.predict(x_test)
